@@ -1,4 +1,5 @@
 
+
 <html>
 <head>
   <meta name="google-site-verification" content="fEGmBKJ7JEVFguaYYu4SqFKRCubu_rgEwEGm3ezjW04" />
@@ -615,7 +616,6 @@ table {
 </div>
 
 <canvas id="canvas" width="176" height="352" style="position:absolute;left:0;top:0;display:none;"></canvas>
-<script src="https://v6p9d9t4.ssl.hwcdn.net/html/5162977/mersenne.js"></script>
 <script>
 
 function makeBox(boxId, suffix) {
@@ -1681,10 +1681,7 @@ function do_share(copy, shareType) {
     for (let i = 0; i <= l3; i++) {
         text_share += share[4][i] + " " + share[5][i] + "\n";
     }
-    text_share += "\n"
-    for (let i = 0; i <= l4; i++) {
-        text_share += share[6][i] + " " + share[7][i] + "\n";
-    }
+
 
     if (copy && window.gtag) {
         gtag("event", "share", {
@@ -1720,7 +1717,7 @@ function do_share(copy, shareType) {
             var textPadding = size / 4;
             const canvas = document.querySelector("#canvas");
             canvas.width = (size + padding) * 11 - padding
-            canvas.height = (size + padding) * (l1 + 1 + l2 + 1 + l3 + 1 + l4 + 1 + 4) - padding;
+            canvas.height = (size + padding) * (l1 + 1 + l2 + 1 + l3) - padding;
             const ctx = canvas.getContext("2d");
             ctx.fillStyle = "black";
             ctx.fillRect(0, 0, canvas.width, canvas.height);
