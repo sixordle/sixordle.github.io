@@ -2,6 +2,7 @@
 
 
 
+
 <html>
 <head>
   <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -328,7 +329,7 @@ table {
                 </td>
             </tr>
         </table>
-        <p>The letters C, O, M, F, Y are not in the word in any spot.<br><br>When you type a guess in Sixordle, you will guess that word for all six words that you are solving. All six words you are solving may be different - but there may be some repeats! This helps to make the game unlimited - meaning there is no end. Even after 100 years, Sixordle will keep going!<br></p>
+        <p>The letters C, O, M, F, Y are not in the word in any spot.<br><br>When you type a guess in Sixordle, you will guess that word for all six words that you are solving. All six words you are solving will be different.<br></p>
         <table style="width: 100%; border-spacing:0px;font-size:200%;">
             <tr>
                 <td style="width: 50%; padding:0px;">
@@ -481,7 +482,7 @@ table {
         </table>
         <table id="widescreen-question" style="width: 100%; font-size: 75%">
             <td style="width:*">
-                Desktop Mode:
+                Desktop Mode: 
             </td>
             <td class="box" id="widescreen-yes">
                 OK
@@ -1129,7 +1130,7 @@ function pk(key, keyCode) {
                     });
                 }
             } else if (line >= TOTAL_LINES) {
-                acquire("body").style.backgroundColor = "red";
+                acquire("body").style.backgroundColor = "black";
                 acquire("body").style.color = "black";
                 show_post_game(true);
                 if (!restoring_game && window.gtag) {
