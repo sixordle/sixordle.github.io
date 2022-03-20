@@ -268,7 +268,7 @@ table {
             <div class="box" style="width: 60%; border:double;cursor:pointer;" id="widescreen-reset">
                 Reset Desktop Settings
             </div>
-          <p style="font-size: 20px">&copy 2022 Guessoword.com</p>
+<p style="font-size: 20px">&copy 2022 Guessoword.com</p>
         </center>
     </div>
     <div id="tutorial" style="width:100%;height:100%;overflow:auto;padding-left:8px;padding-right:8px;font-size:50%;display:none;color:white;background-color:rgb(24, 26, 27);">
@@ -1309,17 +1309,12 @@ function restart() {
     rnd.genrand_int31();
     rnd.genrand_int31();
     rnd.genrand_int31();
-    rnd.genrand_int31();
-    rnd.genrand_int31();
     do {
         answer = [
             answers[rnd.genrand_int31() % answers.length],
             answers[rnd.genrand_int31() % answers.length],
             answers[rnd.genrand_int31() % answers.length],
-            answers[rnd.genrand_int31() % answers.length],
-            
-            answers[rnd.genrand_int31() % answers.length],
-            answers[rnd.genrand_int31() % answers.length],
+            answers[rnd.genrand_int31() % answers.length],            
             answers[rnd.genrand_int31() % answers.length],
             answers[rnd.genrand_int31() % answers.length],
         ];
@@ -1637,7 +1632,6 @@ function do_share(copy, shareType) {
     printclear(acquire("answer12"), answer[0].toUpperCase() + " - " + answer[1].toUpperCase());
     printclear(acquire("answer34"), answer[2].toUpperCase() + " - " + answer[3].toUpperCase());
     printclear(acquire("answer56"), answer[4].toUpperCase() + " - " + answer[5].toUpperCase());
-    printclear(acquire("answer78"), answer[6].toUpperCase() + " - " + answer[7].toUpperCase());
 
     let shouldShowWords = line >= TOTAL_LINES || (answer_correct[0] >= 0 && answer_correct[1] >= 0 && answer_correct[2] >= 0 && answer_correct[3] >= 0) && answer_correct[4] >= 0 && answer_correct[5] >= 0 && answer_correct[6] >= 0 && answer_correct[7] >= 0;
     if (daily_mode) {
