@@ -274,7 +274,7 @@ table {
     <div id="tutorial" style="width:100%;height:100%;overflow:auto;padding-left:8px;padding-right:8px;font-size:50%;display:none;color:white;background-color:rgb(24, 26, 27);">
         <table style="width: 100%;font-size:200%;">
             <tr>
-                <td class="box" style="border: none; border-style: double; width:35%;cursor:pointer;" id="leave_tutorial">back</td>
+                <td class="box" style="border: none; border-style: double; width:35%;cursor:pointer;" id="leave_tutorial">Back</td>
             </tr>
         </table>
         <h3>Sixordle</h3>
@@ -467,8 +467,8 @@ table {
     <div id="game" style="display: none;flex-direction: column;" width="100%">
         <table style="width: 100%;">
             <tr>
-                <td class="box" style="border: none; border-style: double; width:25%;cursor:pointer;" id="restart">back</td>
-                <td class="box" style="border: none; border-style: double; width:20%;cursor:pointer;display:none;" id="reset_free">new</td>
+                <td class="box" style="border: none; border-style: double; width:25%;cursor:pointer;" id="restart">Back</td>
+                <td class="box" style="border: none; border-style: double; width:20%;cursor:pointer;display:none;" id="reset_free">New</td>
                 <td style="width:*; text-align:center;font-size:75%;" id="game_title"></td>
                 <td id="tutorial2" style="padding:6px;cursor:pointer;width:32px;">
                     <img src="help_outline.svg" width="32" height="32">
@@ -1574,7 +1574,7 @@ acquire("share_clipboard").onclick = function() {
 // }
 acquire("reset_free").onclick = function() {
     vibrate();
-    if (isInWebViewiOS || confirm("Are you sure you want to start a new Free Sixordle? (The current game will be deleted)")) {
+    if (isInWebViewiOS || confirm("Are you sure you want to start a new Free Sixordle? (This game will be permanently deleted)")) {
         window.localStorage.removeItem("free_guesses");
         window.localStorage.removeItem("last_free");
         initFree();
