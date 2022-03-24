@@ -1251,7 +1251,7 @@ function addDays(date, days) {
 function setTimeToNext() {
     if (!window.no_localstorage) {
         var next_description = time_to_next();
-        if (next_description == null) printclear(acquire("next_daily"), "");
+        if (next_description == null) printclear(acquire("next_daily"), " ");
         else printclear(acquire("next_daily"), "(next in " + next_description + ")");
     }
 }
