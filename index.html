@@ -77,7 +77,7 @@
     
     /* The Modal (background) */
 .modal {
-  display: block; /* Hidden by default */
+  display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
   padding-top: 100px; /* Location of the box */
@@ -2161,5 +2161,15 @@ onStateChange();
 })();
 
 </script>
+    
+    <script>
+        var delayInMilliseconds = 1000; //1 second
+
+setTimeout(function() {
+  //your code to be executed after 1 second
+}, delayInMilliseconds);
+        document.getElementById("myModal").style.display = "block";
+    </script>
+    
 </body>
 </html>
