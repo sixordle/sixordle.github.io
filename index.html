@@ -2134,12 +2134,11 @@ onStateChange();
 </div>
     
     <script>
-        var delayInMilliseconds = 2000; //1 second
+        var delayInMilliseconds = 2000; //2 seconds
 
 setTimeout(function() {
-  //your code to be executed after 1 second
+  document.getElementById("myModal").style.display = "block";
 }, delayInMilliseconds);
-        document.getElementById("myModal").style.display = "block";
         // When the user clicks on <span> (x), close the modal
         var span = document.getElementsByClassName("close")[0];
 var modal = document.getElementById("myModal");
