@@ -2166,7 +2166,7 @@ onStateChange();
     
     <div style="display: block; color: black" id="modal">
   <div class="modal-content">
-    <span class="close-button">&times;</span>
+    <span id="closebutton" class="close-button">&times;</span>
     <h2>Important Announcement:</h2>
     <p>Sixordle's host website, Guessoword.com, is launching a groundbreaking mind puzzle game. If you enjoy Sixordle, please try <a style="color: black" href="https://brainbender.guessoword.com">Brain Bender</a>.
     <br>While the game is currently a work in progress, our team has revealed a demo game to outline some key features.<br><br>For more information, read <a style="color: black" href="https://www.guessoword.com/brain-bender">
@@ -2176,7 +2176,7 @@ onStateChange();
     
     <script>
         var modal = document.getElementById("modal");
-var closeButton = document.getElementsByClassName("close-button")[0];
+var closeButton = document.getElementsById("closebutton");
 
 window.onload = function() {
   modal.style.display = "block";
@@ -2184,12 +2184,6 @@ window.onload = function() {
 
 closeButton.onclick = function() {
   modal.style.display = "none";
-}
-
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
 }
 
     </script>
