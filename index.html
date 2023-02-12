@@ -2188,26 +2188,5 @@ closeButton.onclick = function() {
 
     </script>
     
-    <script>
-        var delayInMilliseconds = 1480; //2 seconds
-
-setTimeout(function() {
-  document.getElementById("myModal").style.display = "block";
-}, delayInMilliseconds);
-        // When the user clicks on <span> (x), close the modal
-        var span = document.getElementsByClassName("close")[0];
-var modal = document.getElementById("myModal");
-span.onclick = function() {
-  modal.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
-    </script>
-    
 </body>
 </html>
