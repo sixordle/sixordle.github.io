@@ -249,47 +249,6 @@ table {
     border-collapse: var(--collapse);
     border-spacing: var(--spacing);
 }
-    #modal {
-  display: none;
-  position: fixed;
-  z-index: 1;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(0, 0, 0, 0.5);
-}
-
-.modal-content {
-  background-color: #fefefe;
-  margin: 15% auto;
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%;
-}
-
-.close-button {
-  color: #aaa;
-  background-color: #fff;
-  border-radius: 50%;
-  outline: 1px solid;
-  height: 20px;
-  width: 20px;
-  text-align: center;
-  float: right;
-  font-size: 20px;
-  font-weight: bold;
-  line-height: 20px;
-}
-
-
-.close-button:hover,
-.close-button:focus {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
-}
 </style>
 </head>
 <body style="background-color: black">
@@ -2164,28 +2123,35 @@ onStateChange();
 
 </script>
     
-    <div style="display: block; color: black" id="modal">
+    <div id="myModal" class="modal">
+
+  <!-- Modal content -->
   <div class="modal-content">
-    <span id="closebutton" class="close-button">&times;</span>
-    <h2>Important Announcement:</h2>
-    <p>Sixordle's host website, Guessoword.com, is launching a groundbreaking mind puzzle game. If you enjoy Sixordle, please try <a style="color: black" href="https://brainbender.guessoword.com">Brain Bender</a>.
-    <br>While the game is currently a work in progress, our team has revealed a demo game to outline some key features.<br><br>For more information, read <a style="color: black" href="https://www.guessoword.com/brain-bender">
-    this article</a> and join the <a style="color: black" href="https://discord.gg/d9j2taCnN3">Discord Server</a>.</p>	
+    <span class="close">&times;</span>
+    <p style="color: black">Help Sixordle. This is a very popular game. We've had more than 80,000 players so far, and this game costs a lot to maintain and run. If possible, could you donate $5 (no fees) to us? It will help us run and we will really appreciate it. If you think our game is worth $5, please consider helping us out: <a style="color: black" href="https://buymeacoffee.com/sixordle" target="_blank">buymeacoffee.com/sixordle</a>.</p>
   </div>
+
 </div>
     
     <script>
-        var modal = document.getElementById("modal");
-var closeButton = document.getElementById("closebutton");
+        var delayInMilliseconds = 1480; //2 seconds
 
-window.onload = function() {
-  modal.style.display = "block";
-}
-
-closeButton.onclick = function() {
+setTimeout(function() {
+  document.getElementById("myModal").style.display = "block";
+}, delayInMilliseconds);
+        // When the user clicks on <span> (x), close the modal
+        var span = document.getElementsByClassName("close")[0];
+var modal = document.getElementById("myModal");
+span.onclick = function() {
   modal.style.display = "none";
 }
 
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
     </script>
     
 </body>
