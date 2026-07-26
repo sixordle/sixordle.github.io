@@ -6,8 +6,17 @@
 
 <html>
 <head>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2705127822296900"
-     crossorigin="anonymous"></script>
+    <script>
+      // Auto ads can cover or resize the game on phones. Load them on desktop
+      // only; the mobile homepage banner and social bar are separate.
+      if (window.matchMedia('(min-width: 601px)').matches) {
+        const adsense = document.createElement('script');
+        adsense.async = true;
+        adsense.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2705127822296900';
+        adsense.crossOrigin = 'anonymous';
+        document.head.appendChild(adsense);
+      }
+    </script>
 
     <link
       href="css2.css"
@@ -150,6 +159,13 @@ body {
 
 #game iframe[title="ad"] {
     max-width: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+    /* Keep ads out of the active/post-game screen on phones. */
+    #game iframe[title="ad"] {
+        display: none !important;
+    }
 }
     
     #keyboard {
