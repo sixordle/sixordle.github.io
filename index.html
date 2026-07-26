@@ -162,8 +162,39 @@ body {
 }
 
 @media only screen and (max-width: 600px) {
+    html,
+    body {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    /* The app's three screens are alternatives, not horizontal columns. */
+    #body {
+        height: 100vh !important;
+        height: 100dvh !important;
+        min-height: 0;
+        flex-direction: column;
+        overflow: hidden;
+    }
+
+    #game {
+        height: 100%;
+        min-height: 0;
+        overflow: hidden;
+    }
+
+    #normal-container {
+        min-height: 0;
+    }
+
     /* Keep ads out of the active/post-game screen on phones. */
     #game iframe[title="ad"] {
+        display: none !important;
+    }
+
+    #container-31ef390ccd4b3fb19d50afec25cea963,
+    #game-ad-container {
         display: none !important;
     }
 }
@@ -736,7 +767,7 @@ table {
                 <td class="box button key" style="border-left: none; border-top:none;" width="10%" id="enter2">&#x23CE;</td>
             </tr>
         </table>
-        <div style="width:100%; text-align:center; margin-top:8px;">
+        <div id="game-ad-container" style="width:100%; text-align:center; margin-top:8px;">
             <div id="container-31ef390ccd4b3fb19d50afec25cea963"></div>
         </div>
     </div>
@@ -2196,7 +2227,17 @@ window.onclick = function(event) {
   }
 }
     </script>
-    <script async="async" data-cfasync="false" src="https://pl30547721.effectivecpmnetwork.com/31ef390ccd4b3fb19d50afec25cea963/invoke.js"></script>
+    <script>
+      // This script fills the native ad container below the keyboard. It can
+      // collapse the board area on phones, so only load it on desktop.
+      if (window.matchMedia('(min-width: 601px)').matches) {
+        const gameAd = document.createElement('script');
+        gameAd.async = true;
+        gameAd.dataset.cfasync = 'false';
+        gameAd.src = 'https://pl30547721.effectivecpmnetwork.com/31ef390ccd4b3fb19d50afec25cea963/invoke.js';
+        document.body.appendChild(gameAd);
+      }
+    </script>
     <script src="https://pl30547963.effectivecpmnetwork.com/08/88/b5/0888b5d3f54bd484859b0df18eda0013.js"></script>
 
 </body>
