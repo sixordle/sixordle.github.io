@@ -127,6 +127,30 @@ body {
     color: white;
     margin: 0;
 }
+
+/* Keep each app screen full-width on narrow/mobile viewports. */
+#body {
+    width: 100%;
+    min-height: 100vh;
+    min-height: 100dvh;
+    box-sizing: border-box;
+}
+
+#body > #title,
+#body > #tutorial,
+#body > #game {
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+}
+
+#game {
+    flex: 1 1 100%;
+}
+
+#game iframe[title="ad"] {
+    max-width: 100%;
+}
     
     #keyboard {
   background-image: none;
